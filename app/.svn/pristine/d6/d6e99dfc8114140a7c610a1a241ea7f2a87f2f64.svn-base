@@ -62,12 +62,8 @@
 				var imgHeight = $('#backgroud').height();
 				
 				function scrollpage(crood, time) {
-					setTimeout(function() {
-						$('body').animate({scrollTop:crood*imgHeight/100},time);
-					}, 100)
-					  
-                	return false;
-                	
+					$('body,html').animate({scrollTop:crood*imgHeight/100},time);  
+                	return false;  
 				}
 				scrollpage(0, 100);
 //				setTimeout(function() {

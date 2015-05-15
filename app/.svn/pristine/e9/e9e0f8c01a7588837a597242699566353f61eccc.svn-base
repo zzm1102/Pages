@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BLOVES 爱的传说号</title>
+	    <meta charset="utf-8" />
+	    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	    <meta name="apple-touch-fullscreen" content="YES" />
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <meta http-equiv="Expires" content="-1" />
+	    <meta http-equiv="pragram" content="no-cache" />
+	    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/bloves.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="train-bg">
+				<img src="img/background.gif" id="backgroud" />
+				<img src="img/balloon.png" class="balloon" />
+			</div>
+			<div class="train sway">
+				<img src="img/train.png" alt="train" />
+				<div class="smoke sway"><img src="img/smoke.png" class="scale" /></div>
+			</div>
+			<div class="others">
+				<img src="img/others.png" alt="" />
+			</div>
+			<img src="img/notes.png" alt="" class="notes sway" />
+			<img src="img/plane.png" class="plane" />
+			<img src="img/ringtop.png" class="ringtop" />
+			<img src="img/ringbottom.png" class="ringbottom" />
+		</div>
+		<div class="story-1 story">
+			<img src="img/2.jpg"/>
+		</div>
+		<div class="story-2 story">
+			<img src="img/3.jpg"/>
+		</div>
+		<div class="story-3 story">
+			<img src="img/4.jpg"/>
+		</div>
+		<div class="story-4 story">
+			<img src="img/5.jpg"/>
+		</div>
+		<div class="story-5 story">
+			<img src="img/6.jpg"/>
+		</div>
+		<div class="story-6 story">
+			<img src="img/7.jpg"/>
+		</div>
+		<div class="story-7 story">
+			<img src="img/8.jpg"/>
+		</div>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+				//禁止用户touch事件
+				document.body.addEventListener('touchmove', function (event) {
+				    event.preventDefault();
+				}, false);
+				var imgHeight = $('#backgroud').height();
+				
+				function scrollpage(crood, time) {
+					$('body,html').animate({scrollTop:crood*imgHeight/100},time);  
+                	return false;  
+				}
+				scrollpage(0, 100);
+				
+				setTimeout(function() {
+					$('.balloon').animate({'top': '-20%'}, 8000)
+				},4000)
+				setTimeout(function() {
+					//内部时间+16000
+					scrollpage(17, 6000);
+					$('.wrap').delay(8500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-1').delay(9000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				}, 10000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(28, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-2').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+					$('.plane').delay(4000).animate({'right': '100%'}, 3000);
+				},28000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(39, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-3').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},42000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(50, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-4').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},56000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(61, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-5').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},69000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(72, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-6').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},83000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(83, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-7').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},97000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(94, 5000);
+				},111000);
+				
+		</script>
+	</body>
+</html>

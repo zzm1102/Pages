@@ -33,7 +33,7 @@ html, body {margin: 0; padding: 0;}
 .story {top: -40px;}
 }
 @media screen and (min-width: 330px) and (max-width: 400px) {
-.story {top: -85px;}
+.story {top: -65px;}
 }
 
 
