@@ -11,14 +11,13 @@
 	    <meta http-equiv="Expires" content="-1" />
 	    <meta http-equiv="pragram" content="no-cache" />
 	    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-	    <link rel="stylesheet" type="text/css" href="css/bloves.css?aa=2016" media="screen" />
+	    <link rel="stylesheet" type="text/css" href="css/bloves.css"/>
 	</head>
 	<body>
 		<div class="wrap">
-			<img src="img/balloon.png" class="balloon" />
 			<div class="train-bg">
 				<img src="img/background.gif" id="backgroud" />
-				
+				<img src="img/balloon.png" class="balloon" />
 			</div>
 			<div class="train sway">
 				<img src="img/train.png" alt="train" />
@@ -55,87 +54,76 @@
 		</div>
 		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-				//禁止用户touch事件
-				document.body.addEventListener('touchmove', function (event) {
-				    event.preventDefault();
-				}, false);
+//			(function () {
+//	            var winW = $(window).width()
+//	            $('.wrap').css({
+//	            	'width': winW + 'px',
+//	            	'height': winW * 16.008  + 'px'
+//	            });
 				var imgHeight = $('#backgroud').height();
 				
+//				scroll(0,0);
+				
 				function scrollpage(crood, time) {
-					setTimeout(function() {
-						$('body').animate({scrollTop:crood*imgHeight/100},time);
-					}, 100)
-					  
-                	return false;
-                	
+					$('body,html').animate({scrollTop:crood*imgHeight/100},time);  
+                	return false;  
 				}
 				scrollpage(0, 100);
-//				setTimeout(function() {
-//					test();
-//				}, 500)
-//				function test() {
-					setTimeout(function() {
-						$('.balloon').animate({'top': '-20%'}, 8000); //0
-						setTimeout(function() {
-							//内部时间+14000  1
-							scrollpage(17, 6000);
-							$('.wrap').delay(6500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
-							$('.story-1').delay(7000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-							setTimeout(function() {
-								//内部时间+14000  2
-								scrollpage(28, 5000);
-								$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-								$('.story-2').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-								$('.plane').delay(4000).animate({'right': '100%'}, 3000);
-								setTimeout(function() {
-									//内部时间+12000  3
-									scrollpage(39, 5000);
-									$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-									$('.story-3').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-									setTimeout(function() {
-										//内部时间+12000  4
-										scrollpage(50, 5000);
-										$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-										$('.story-4').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-										setTimeout(function() {
-											//内部时间+14000  5
-											scrollpage(61, 5000);
-											$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-											$('.story-5').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-											setTimeout(function() {
-												//内部时间+14000  6
-												scrollpage(72, 5000);
-												$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-												$('.story-6').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-												setTimeout(function() {
-													//内部时间+14000  7
-													scrollpage(83, 5000);
-													$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-													$('.story-7').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-													setTimeout(function() {
-														//内部时间+14000  8
-														scrollpage(94, 5000); 
-													},12000); //8
-												},12000); //7
-											},12000); //6
-										},12000); //5
-									},12000); //4
-								},12000); //3
-							},14000); //2
-						}, 4000); //1
-					},3000) //0
-					
-					
-					
-					
-					
-					
-					
-					
-//				}
+				
+				setTimeout(function() {
+					$('.balloon').animate({'top': '-20%'}, 8000)
+				},4000)
+				setTimeout(function() {
+					//内部时间+16000
+					scrollpage(17, 6000);
+					$('.wrap').delay(8500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-1').delay(9000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				}, 10000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(28, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-2').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+					$('.plane').delay(4000).animate({'right': '100%'}, 3000);
+				},28000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(39, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-3').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},42000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(50, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-4').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},56000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(61, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-5').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},69000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(72, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-6').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},83000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(83, 5000);
+					$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+					$('.story-7').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+				},97000);
+				setTimeout(function() {
+					//内部时间+14000
+					scrollpage(94, 5000);
+				},111000);
+//				
 				
 				
-				
+//			})()
 		</script>
 	</body>
 </html>
