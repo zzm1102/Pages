@@ -27,13 +27,15 @@ html, body {margin: 0; padding: 0;}
 .ringtop {top: 76.8%; z-index: 5;}
 .ringbottom {top: 82.25%; z-index: 1;}
 
-.story {width: 100%; opacity: 0; background-color: honeydew; position: fixed; z-index: 10; top: -40px;}
+.story {width: 100%; opacity: 0; background-color: honeydew; position: fixed; z-index: 10; top: 0;}
 .story > img {width: 100%;}
 @media screen and (min-width: 400px) and (max-width: 600px){
-.story {top: -40px;}
+/*ip6*/
+.story {top: -30px;}
 }
-@media screen and (min-width: 330px) and (max-width: 400px) {
-.story {top: -85px;}
+@media screen and (min-width: 330px) and (max-width: 460px) {
+/*索尼*/
+.story {top: -30px;}
 }
 
 

@@ -62,10 +62,8 @@
 				var imgHeight = $('#backgroud').height();
 				
 				function scrollpage(crood, time) {
-					setTimeout(function() {
-						$('body').animate({scrollTop:crood*imgHeight/100},time);
-					}, 100)
-					  
+					$('body,html').animate({scrollTop:crood*imgHeight/100},time);  
+					alert(0);
                 	return false;
                 	
 				}
@@ -79,6 +77,7 @@
 						setTimeout(function() {
 							//内部时间+14000  1
 							scrollpage(17, 6000);
+							alert(1);
 							$('.wrap').delay(6500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
 							$('.story-1').delay(7000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
 							setTimeout(function() {
