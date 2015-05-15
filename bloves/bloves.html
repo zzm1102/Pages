@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BLOVES 爱的传说号</title>
+	    <meta charset="utf-8" />
+	    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	    <meta name="apple-touch-fullscreen" content="YES" />
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <meta http-equiv="Expires" content="-1" />
+	    <meta http-equiv="pragram" content="no-cache" />
+	    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/bloves.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="train-bg">
+				<div class="train"><img src="img/train.gif" alt="train" /></div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function () {
+				function scroll() {
+					$('body,html').animate({scrollTop:510},10000);  
+                	return false;  
+				}
+				$(scroll);
+//				$(window).scroll(function(){  
+//	                if( $(window).scrollTop() >= 1300 ) {  
+//	                    $('.wrap').delay(300).fadeOut(600);
+//	                }
+//	            }); 
+				setTimeout(function() {
+					$('.wrap').delay(300).animate({'opacity': '.1'}, 450);
+				}, 10000)
+			})()
+		</script>
+	</body>
+</html>
