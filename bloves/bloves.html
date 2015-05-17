@@ -18,7 +18,6 @@
 			<img src="img/balloon.png" class="balloon" />
 			<div class="train-bg">
 				<img src="img/background.gif" id="backgroud" />
-				
 			</div>
 			<div class="train sway">
 				<img src="img/train.png" alt="train" />
@@ -31,6 +30,7 @@
 			<img src="img/plane.png" class="plane" />
 			<img src="img/ringtop.png" class="ringtop" />
 			<img src="img/ringbottom.png" class="ringbottom" />
+			<div class="btn">点击分享</div>
 		</div>
 		<div class="story-1 story">
 			<img src="img/2.jpg"/>
@@ -53,79 +53,81 @@
 		<div class="story-7 story">
 			<img src="img/8.jpg"/>
 		</div>
+		<div class="mask"><img src="img/arrow.png" alt="" /></div>
+		
 		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 				//禁止用户touch事件
 				document.body.addEventListener('touchmove', function (event) {
 				    event.preventDefault();
 				}, false);
-				var imgHeight = $('#backgroud').height();
+				var imgHeight = $('#backgroud').height() / 100;
 				
 				function scrollpage(crood, time) {
-					setTimeout(function() {
-						$('body').animate({scrollTop:crood*imgHeight/100},time);
-					}, 100)
-					  
-                	return false;
-                	
+					$('body').animate({scrollTop:crood*imgHeight},time);
 				}
 				scrollpage(0, 100);
 //				setTimeout(function() {
 //					test();
 //				}, 500)
 //				function test() {
-					setTimeout(function() {
-						$('.balloon').animate({'top': '-20%'}, 8000); //0
-						setTimeout(function() {
-							//内部时间+14000  1
-							scrollpage(17, 6000);
-							$('.wrap').delay(6500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
-							$('.story-1').delay(7000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-							setTimeout(function() {
-								//内部时间+14000  2
-								scrollpage(28, 5000);
-								$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-								$('.story-2').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-								$('.plane').delay(4000).animate({'right': '100%'}, 3000);
-								setTimeout(function() {
-									//内部时间+12000  3
-									scrollpage(39, 5000);
-									$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-									$('.story-3').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-									setTimeout(function() {
-										//内部时间+12000  4
-										scrollpage(50, 5000);
-										$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-										$('.story-4').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-										setTimeout(function() {
-											//内部时间+14000  5
-											scrollpage(61, 5000);
-											$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-											$('.story-5').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-											setTimeout(function() {
-												//内部时间+14000  6
-												scrollpage(72, 5000);
-												$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-												$('.story-6').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-												setTimeout(function() {
-													//内部时间+14000  7
-													scrollpage(83, 5000);
-													$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
-													$('.story-7').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
-													setTimeout(function() {
-														//内部时间+14000  8
-														scrollpage(94, 5000); 
-													},12000); //8
-												},12000); //7
-											},12000); //6
-										},12000); //5
-									},12000); //4
-								},12000); //3
-							},14000); //2
-						}, 4000); //1
-					},3000) //0
+//					setTimeout(function() {
+//						$('.balloon').animate({'top': '-20%'}, 8000); //0
+//						setTimeout(function() {
+//							//内部时间+14000  1
+//							scrollpage(17, 6000);
+//							$('.wrap').delay(6500).animate({'opacity': '.1'}, 450).delay(6500).animate({'opacity': '1'}, 450);
+//							$('.story-1').delay(7000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+//							setTimeout(function() {
+//								//内部时间+14000  2
+//								scrollpage(28, 5000);
+//								$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
+//								$('.story-2').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+//								$('.plane').delay(4000).animate({'right': '100%'}, 3000);
+//								setTimeout(function() {
+//									//内部时间+12000  3
+//									scrollpage(39, 5000);
+//									$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
+//									$('.story-3').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+//									setTimeout(function() {
+//										//内部时间+12000  4
+//										scrollpage(50, 5000);
+//										$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
+//										$('.story-4').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+//										setTimeout(function() {
+//											//内部时间+14000  5
+//											scrollpage(61, 5000);
+//											$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
+//											$('.story-5').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+//											setTimeout(function() {
+//												//内部时间+14000  6
+//												scrollpage(72, 5000);
+//												$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
+//												$('.story-6').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+//												setTimeout(function() {
+//													//内部时间+14000  7
+//													scrollpage(83, 5000);
+//													$('.wrap').delay(5500).animate({'opacity': '.1'}, 450).delay(6000).animate({'opacity': '1'}, 450);
+//													$('.story-7').delay(6000).animate({'opacity': '1'}, 1000).delay(5000).animate({'opacity': '0'}, 600);
+//													setTimeout(function() {
+//														//内部时间+14000  8
+//														scrollpage(94, 5000); 
+//													},12000); //8
+//												},12000); //7
+//											},12000); //6
+//										},12000); //5
+//									},12000); //4
+//								},12000); //3
+//							},14000); //2
+//						}, 4000); //1
+//					},3000) //0
 					
-					
+					$('.btn').on('click', function() {
+						$('.mask').fadeIn(500);
+					})
+					$('.mask').on('click', function(){
+						$(this).fadeOut(500)
+					})
 					
 					
 					
