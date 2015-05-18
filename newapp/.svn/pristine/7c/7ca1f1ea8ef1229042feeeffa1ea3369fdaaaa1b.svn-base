@@ -1,3 +1,8 @@
+<?php
+require_once "jssdk.php";
+$jssdk = new JSSDK("wxa2c02ad4f206c7f3", "5c4788b78875ef7db3df014bf7e25c4e");
+$signPackage = $jssdk -> GetSignPackage();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,22 +23,21 @@
 		<div class="wrap">
 			<img src="img/balloon.png" class="balloon" />
 			<div class="train-bg">
-				<img src="img/background.gif" id="backgroud" class="" />
+				<img src="img/background.gif" id="backgroud" class="move" />
 			</div>
 			<div class="train sway">
 				<img src="img/train.png" alt="train" />
 				<div class="smoke sway"><img src="img/smoke.png" class="scale" /></div>
 			</div>
-			<div class="others">
+			<div class="others move">
 				<img src="img/others.png" alt="" />
 			</div>
-			<div class="notes-wrap sway"><img src="img/notes2.png" alt="" class="notes" /></div>
+			<div class="notes-wrap sway"><img src="img/notes2.png" alt="" class="notes move" /></div>
 			
-			<img src="img/plane2.png" class="plane" />
-			<img src="img/ringtop2.png" class="ringtop" />
-			<img src="img/ringbottom2.png" class="ringbottom" />
+			<img src="img/plane2.png" class="plane move" />
+			<img src="img/ringtop2.png" class="ringtop move" />
+			<img src="img/ringbottom2.png" class="ringbottom move" />
 			<!--<div class="btn move">点击分享</div>-->
-			<div class="pause"><i></i></div>
 		</div>
 		<div class="story-1 story">
 			<img src="img/2.jpg"/>
@@ -67,51 +71,33 @@
 				document.body.addEventListener('touchmove', function (event) {
 				    event.preventDefault();
 				}, false);
-		        window.onload = function() {
-		        	$('#backgroud, .others, .notes, .plane, .ringtop, .ringbottom').addClass('move');
 
-					$('.balloon').delay(2000).animate({'top': '-20%'}, 8000);
-					
-					$('.wrap').delay(10000).animate({'opacity': '.1'}, 600).delay(7000).animate({'opacity': '1'}, 600);
-					$('.story-1').delay(10700).animate({'opacity': '1'}, 1200).delay(5400).animate({'opacity': '0'}, 600);
-					$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
-					$('.story-2').delay(23700).animate({'opacity': '1'}, 1200).delay(5400).animate({'opacity': '0'}, 600);
-					$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
-					$('.plane').delay(21500).animate({'right': '100%'}, 3000);
-					$('.story-3').delay(36700).animate({'opacity': '1'}, 1200).delay(5400).animate({'opacity': '0'}, 600);
-					$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
-					$('.story-4').delay(49700).animate({'opacity': '1'}, 1200).delay(5400).animate({'opacity': '0'}, 600);
-					$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
-					$('.story-5').delay(62700).animate({'opacity': '1'}, 1200).delay(5400).animate({'opacity': '0'}, 600);
-					$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
-					$('.story-6').delay(75700).animate({'opacity': '1'}, 1200).delay(5400).animate({'opacity': '0'}, 600);
-					$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
-					$('.story-7').delay(88700).animate({'opacity': '1'}, 1200).delay(5400).animate({'opacity': '0'}, 600);
-					$('.btn').delay(99000).fadeIn(300);
-					
-					$('.btn').on('click', function() {
-						$('.mask').fadeIn(500);
-					})
-					$('.mask').on('click', function(){
-						$(this).fadeOut(500)
-					})
-					
-					function bf(){
-					   var audio = document.getElementById('mc'); 
-					   if(audio!==null){             
-					    //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
-					      if(audio.paused) {                 
-					         audio.play();//audio.play();// 这个就是播放  
-					      }else{
-					         audio.pause();// 这个就是暂停
-					      }
-					   } 
-					}
-					$('.pause').on('click', function() {
-						bf();
-						$(this).find('i').toggleClass('toggle');
-					})
-				} //onload end
+				$('.balloon').delay(2000).animate({'top': '-20%'}, 8000);
+				
+				$('.wrap').delay(10000).animate({'opacity': '.1'}, 600).delay(7000).animate({'opacity': '1'}, 600);
+				$('.story-1').delay(10700).animate({'opacity': '1'}, 600).delay(6000).animate({'opacity': '0'}, 600);
+				$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
+				$('.story-2').delay(23700).animate({'opacity': '1'}, 600).delay(6000).animate({'opacity': '0'}, 600);
+				$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
+				$('.plane').delay(21500).animate({'right': '100%'}, 3000);
+				$('.story-3').delay(36700).animate({'opacity': '1'}, 600).delay(6000).animate({'opacity': '0'}, 600);
+				$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
+				$('.story-4').delay(49700).animate({'opacity': '1'}, 600).delay(6000).animate({'opacity': '0'}, 600);
+				$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
+				$('.story-5').delay(62700).animate({'opacity': '1'}, 600).delay(6000).animate({'opacity': '0'}, 600);
+				$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
+				$('.story-6').delay(75700).animate({'opacity': '1'}, 600).delay(6000).animate({'opacity': '0'}, 600);
+				$('.wrap').delay(5000).animate({'opacity': '.1'}, 600).delay(6700).animate({'opacity': '1'}, 600);
+				$('.story-7').delay(88700).animate({'opacity': '1'}, 600).delay(6000).animate({'opacity': '0'}, 600);
+				$('.btn').delay(99000).fadeIn(300);
+				
+				$('.btn').on('click', function() {
+					$('.mask').fadeIn(500);
+				})
+				$('.mask').on('click', function(){
+					$(this).fadeOut(500)
+				})
+		 
 		</script>
         <!--
         	作者：165256676@qq.com
@@ -121,6 +107,22 @@
         
 		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 		<script>
+		
+		wx.config({
+		
+		    debug: false,
+		
+		    appId: '<?php echo $signPackage["appId"];?>',
+		
+		    timestamp: <?php echo $signPackage["timestamp"];?>,
+		
+		    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+		
+		    signature: '<?php echo $signPackage["signature"];?>',
+		
+		    jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage',]
+		});
+		
 		 wx.ready(function () {
 			  wx.onMenuShareTimeline({
 		      title: '安小主已经找到了自己的幸福。快来分享一下，送出你的祝福，传递这份喜悦吧！',
@@ -150,9 +152,18 @@
 		</script>
 		        
 		      <!--
-		      	作者：chimon
+		      	作者：165256676@qq.com
 		      	时间：2015-05-16
+		      	描述：百度统计
 		      -->
+		      
+		<script>
+		
+		</script>
 
+      
+        
 	</body>
 </html>
+
+

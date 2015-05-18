@@ -27,9 +27,6 @@ html, body {margin: 0; padding: 0; overflow: hidden;}
 .plane {/*top: 36%;*/ z-index: 6; right: -50%; top: 0;}
 .ringtop {/*top: 76.8%;*/ z-index: 5; top: 0;}
 .ringbottom {/*top: 82.25%;*/ z-index: 1; top: 0;}
-.pause {width: 35px; height: 35px; position: fixed; top: 0; right: 0; background-color: rgba(0,0,0,.5); z-index: 16; border-radius: 50%;}
-.pause i {background: url(../img/audio.png) repeat scroll top left; display: block; width: 35px; height: 35px; background-size: 100%;}
-.pause i.toggle {background-position: 0 -114px;}
 
 .story {width: 100%; opacity: 0; background-color: honeydew; position: fixed; z-index: 10; top: -40px;}
 .story > img {width: 100%;}
@@ -135,6 +132,6 @@ html, body {margin: 0; padding: 0; overflow: hidden;}
 	83% {-webkit-transform: translateY(-72%);}
 	88% {-webkit-transform: translateY(-83%);}
 	96% {-webkit-transform: translateY(-83%);}
-	100% {-webkit-transform: translateY(-89.5%);}
+	100% {-webkit-transform: translateY(-90%);}
 }
 

@@ -1,3 +1,8 @@
+<?php
+require_once "jssdk.php";
+$jssdk = new JSSDK("wxa2c02ad4f206c7f3", "5c4788b78875ef7db3df014bf7e25c4e");
+$signPackage = $jssdk -> GetSignPackage();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -67,6 +72,8 @@
 				document.body.addEventListener('touchmove', function (event) {
 				    event.preventDefault();
 				}, false);
+//				var obj = new Image();
+//		        obj.src = "img/background.gif";
 		        window.onload = function() {
 		        	$('#backgroud, .others, .notes, .plane, .ringtop, .ringbottom').addClass('move');
 
@@ -112,6 +119,7 @@
 						$(this).find('i').toggleClass('toggle');
 					})
 				} //onload end
+		 
 		</script>
         <!--
         	作者：165256676@qq.com
@@ -121,6 +129,22 @@
         
 		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 		<script>
+		
+		wx.config({
+		
+		    debug: false,
+		
+		    appId: '<?php echo $signPackage["appId"];?>',
+		
+		    timestamp: <?php echo $signPackage["timestamp"];?>,
+		
+		    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+		
+		    signature: '<?php echo $signPackage["signature"];?>',
+		
+		    jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage',]
+		});
+		
 		 wx.ready(function () {
 			  wx.onMenuShareTimeline({
 		      title: '安小主已经找到了自己的幸福。快来分享一下，送出你的祝福，传递这份喜悦吧！',
@@ -150,9 +174,18 @@
 		</script>
 		        
 		      <!--
-		      	作者：chimon
+		      	作者：165256676@qq.com
 		      	时间：2015-05-16
+		      	描述：百度统计
 		      -->
+		      
+		<script>
+		
+		</script>
 
+      
+        
 	</body>
 </html>
+
+
