@@ -17,20 +17,20 @@
 		<div class="wrap">
 			<img src="img/balloon.png" class="balloon" />
 			<div class="train-bg">
-				<img src="img/background.gif" id="backgroud" />
+				<img src="img/background.gif" id="backgroud" class="move" />
 			</div>
 			<div class="train sway">
 				<img src="img/train.png" alt="train" />
 				<div class="smoke sway"><img src="img/smoke.png" class="scale" /></div>
 			</div>
-			<div class="others">
+			<div class="others move">
 				<img src="img/others.png" alt="" />
 			</div>
 			<img src="img/notes.png" alt="" class="notes sway" />
 			<img src="img/plane.png" class="plane" />
 			<img src="img/ringtop.png" class="ringtop" />
 			<img src="img/ringbottom.png" class="ringbottom" />
-			<div class="btn">点击分享</div>
+			<div class="btn move">点击分享</div>
 		</div>
 		<div class="story-1 story">
 			<img src="img/2.jpg"/>
@@ -61,12 +61,13 @@
 				document.body.addEventListener('touchmove', function (event) {
 				    event.preventDefault();
 				}, false);
-				var imgHeight = $('#backgroud').height() / 100;
-				
-				function scrollpage(crood, time) {
-					$('body').animate({scrollTop:crood*imgHeight},time);
-				}
-				scrollpage(0, 100);
+//				document.onload = "scroll(0,0)"
+//				var imgHeight = $('#backgroud').height() / 100;
+//				
+//				function scrollpage(crood, time) {
+//					$('body').animate({scrollTop:crood*imgHeight},time);
+//				}
+//				scrollpage(0, 100);
 //				setTimeout(function() {
 //					test();
 //				}, 500)
@@ -121,20 +122,18 @@
 //							},14000); //2
 //						}, 4000); //1
 //					},3000) //0
-					
-					$('.btn').on('click', function() {
-						$('.mask').fadeIn(500);
-					})
-					$('.mask').on('click', function(){
-						$(this).fadeOut(500)
-					})
-					
-					
-					
-					
-					
+//					
+//					$('.btn').on('click', function() {
+//						$('.mask').fadeIn(500);
+//					})
+//					$('.mask').on('click', function(){
+//						$(this).fadeOut(500)
+//					})
 					
 //				}
+setTimeout(function() {
+	$('.balloon').animate({'top': '-20%'}, 8000);
+},3000);
 				
 				
 				
