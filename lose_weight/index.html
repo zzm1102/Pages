@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/lose_weight.css"/>
+</head>
+<body>
+	<div id="mq" style="width:150;height:80px;font-size: 15px; overflow:hidden" onmouseover="iScrollAmount=0" onmouseout="iScrollAmount=1">
+	　　<p>肉者，即携膘者</p>
+		<p>多因酒肉相伴所致</p>
+		<p>肠肥脑满，大腹便便</p>
+		<p>终至一日，不胜恼烦</p>
+		<p>欲减膘，或玉树临风，或一貌倾城</p>
+		<p>平安膘局 ，威震肉林</p>
+		<p>押膘、送膘 自成一套 </p>
+		<p>天下之肉者，皆踏破门槛</p>
+		<p>……</p>
+	</div>
+	<script>
+		var oMarquee = document.getElementById("mq"); //滚动对象
+		var iLineHeight = 50; //单行高度，像素
+		var iLineCount = 10; //实际行数
+		var iScrollAmount = 1; //每次滚动高度，像素
+		function run() {
+			oMarquee.scrollTop += iScrollAmount;
+			if ( oMarquee.scrollTop == iLineCount * iLineHeight )
+			oMarquee.scrollTop = 0;
+			if ( oMarquee.scrollTop % iLineHeight == 0 ) {
+				window.setTimeout( "run()", 2000 );
+			} else {
+				window.setTimeout( "run()", 20 );
+			}
+		}
+//		oMarquee.innerHTML += oMarquee.innerHTML;
+		window.setTimeout( "run()", 2000 );
+	</script>
+	
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

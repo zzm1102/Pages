@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	    <meta name="apple-touch-fullscreen" content="YES" />
+	    <meta name="description" />
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/lose_weight.css"/>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		
+	</div>
+	
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script>
+//		var obj = document.getElementById('wrap');
+//		var sx, sy;
+//		obj.ontouchstart = function(e) {
+//			sx = e.touches[0].pageX;
+//			sy = e.touches[0].pageY;
+//			alert('sx')
+//		}
+//		obj.ontouchend = function(e) {
+//			if(sx - e.touches[0].pageX > 50 || sy - e.touchs[0].pageY > 50)  {
+//				alert('右移动')
+//			}
+//			if(sx - e.touches[0].pageX < -50 || sy - e.touchs[0].pageY < -50)  {
+//				alert('左移动')
+//			}
+//		}
+
+
+  (function () {
+        obj = document.getElementById('wrap');
+        var startPosition, endPosition, deltaX, deltaY, moveLength;
+
+        obj.addEventListener('touchstart', function (e) {
+        	e.preventDefault();
+            var touch = e.touches[0];
+            startPosition = {
+                x: touch.pageX,
+                y: touch.pageY
+            }
+        });
+
+        obj.addEventListener('touchend', function (e) {
+        	e.preventDefault();
+            var touch = e.changedTouches[0];
+            endPosition = {
+                x: touch.pageX,
+                y: touch.pageY
+            }
+
+            deltaX = endPosition.x - startPosition.x;
+            deltaY = endPosition.y - startPosition.y;
+            
+             console.log(deltaX);
+            
+        });
+    })();
+
+
+
+	</script>
+	
+
+</body>
+</html>
