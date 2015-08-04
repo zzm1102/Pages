@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>流量监测游戏</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="description" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/flowGame.css?v=841559" media="screen" />
+    <script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+    	<div class="mask hide">
+    		<p>现在你有4个价值100元流量的APP <br /> 他们的流量正在被偷跑！<br />及时按住要偷跑的流量！</p>
+    		<div class="btn">马上开始</div>
+    	</div>
+    	<!--游戏-->
+    	<div class="game-wrap page">
+    		<div class="statistics">
+    			<p>已阻止<span id="flow">0</span>M流量！</p>
+    			<p>节省<span id="money">0</span>元钱！</p>
+    		</div>
+    		<ul>
+    			<li id="app1"><img src="img/wechat2.png"/></li>
+    			<li id="app2"><img src="img/wechat2.png"/></li>
+    			<li id="app3"><img src="img/wechat2.png"/></li>
+    			<li id="app4"><img src="img/wechat2.png"/></li>
+    		</ul>
+    	</div>
+    	
+    	
+    </div> <!--wrap end-->
+    
+	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/touch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js?v=08041644" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
