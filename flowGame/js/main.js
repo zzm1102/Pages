@@ -30,6 +30,19 @@
 //})
 
 var flowNum = 0, moneyNum = 0;
+//刷新更换app
+var randomImg, arr=[]; //0-14
+var imgs = $("#apps img");
+//$("#apps img").attr("src", "img/app_"+randomImg+".png");
+function randomApps() {
+	for (var i=0; i<4; i++) {
+		arr[i] = Math.floor(Math.random() * 14);
+		$("#app"+i).find("img").attr("src", "img/app_"+arr[i]+".png");
+	}
+	console.log(arr);
+}
+randomApps();
+
 
 function moveOn (e, oncomplete, distance, time) {
 	if (typeof e === "string") {e = document.getElementById(e);}
@@ -55,10 +68,10 @@ function moveOn (e, oncomplete, distance, time) {
 				fraction.toFixed(2);
 				flowNum += 2 * fraction;
 				moneyNum += 2 * 5 * fraction;
-				$("#flow").html( flowNum.toFixed(2) );
-				$("#money").html( moneyNum.toFixed(2) );
+				$(".flow").html( flowNum.toFixed(2) );
+				$(".money").html( moneyNum.toFixed(2) );
 				//重置
-				fraction = 1;
+				fraction = 0;
 				clearTimeout(animateExec);
 				e.style.bottom = "30px";
 			}
@@ -86,11 +99,18 @@ function randomPick() {
 	
 	exec = setTimeout(randomPick,150);
 }
-randomPick();
 
-//停止游戏
-setTimeout(function(){
-	clearTimeout(exec);
-//	$(".mask").removeClass("hide");
-},10000);
+$("#start-game").on("click", function() {
+	//开始游戏
+	$(".welcome-page,.mask").addClass("hide");
+	randomPick();
+	$(".statistics").removeClass("hide");
+
+	//停止游戏
+	setTimeout(function(){
+		clearTimeout(exec);
+		$(".result").removeClass("hide");
+	},10000);
+})
+
 

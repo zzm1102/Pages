@@ -17,22 +17,33 @@
 </head>
 <body>
     <div class="wrap">
-    	<div class="mask hide">
+    	<div class="mask"></div>
+    	<div class="welcome-page">
     		<p>现在你有4个价值100元流量的APP <br /> 他们的流量正在被偷跑！<br />及时按住要偷跑的流量！</p>
-    		<div class="btn">马上开始</div>
+    		<div id="start-game">马上开始</div>
     	</div>
     	<!--游戏-->
     	<div class="game-wrap page">
-    		<div class="statistics">
-    			<p>已阻止<span id="flow">0</span>M流量！</p>
-    			<p>节省<span id="money">0</span>元钱！</p>
+    		<div class="statistics hide">
+    			<p>已阻止<span class="flow">0</span>M流量！</p>
+    			<p>节省<span class="money">0</span>元钱！</p>
     		</div>
     		<ul id="apps">
-    			<li id="app1" data-animated="false"><img src="img/wechat2.png"/></li>
-    			<li id="app2" data-animated="false"><img src="img/wechat2.png"/></li>
-    			<li id="app3" data-animated="false"><img src="img/wechat2.png"/></li>
-    			<li id="app4" data-animated="false"><img src="img/wechat2.png"/></li>
+    			<li id="app1" data-animated="false"><img src="img/app_14.png"/></li>
+    			<li id="app2" data-animated="false"><img src="img/app_3.png"/></li>
+    			<li id="app3" data-animated="false"><img src="img/app_6.png"/></li>
+    			<li id="app4" data-animated="false"><img src="img/app_12.png"/></li>
     		</ul>
+    	</div>
+    	<!--战绩-->
+    	<div class="result page hide">
+    		<p>
+	    		厉害！<br /> 
+	    		你一共阻止了<span class="flow">0</span>M流量！<br />
+	    		节省了<span class="money">0</span>元钱！
+    		</p>
+    		<span id="share">晒晒战绩</span> <span id="more">保护更多流量</span>
+    		<div id="share">再玩一次</div>
     	</div>
     	
     	
