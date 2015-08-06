@@ -31,15 +31,17 @@
 
 var flowNum = 0, moneyNum = 0;
 //刷新更换app
-var randomImg, arr=[]; //0-14
-var imgs = $("#apps img");
-//$("#apps img").attr("src", "img/app_"+randomImg+".png");
+var arr=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 function randomApps() {
-	for (var i=0; i<4; i++) {
-		arr[i] = Math.floor(Math.random() * 14);
-		$("#app"+i).find("img").attr("src", "img/app_"+arr[i]+".png");
+	function randomsort(a, b) {
+        return Math.random()>.5 ? -1 : 1; 
 	}
-	console.log(arr);
+	var arrRdm = arr.sort(randomsort); // 打乱生成的新数组
+	console.log(arrRdm);
+	//新数组取值更换app图标
+	for (var i=0; i<4; i++) {
+		$("#app"+(i+1)).find("img").attr("src", "img/app_"+arrRdm[i]+".png");
+	}
 }
 randomApps();
 
@@ -64,10 +66,11 @@ function moveOn (e, oncomplete, distance, time) {
 			var animateExec = setTimeout(animate, Math.min(25, time-elapsed));
 			//添加触摸重置事件
 			e.onclick = function() {
-				//计算
-				fraction.toFixed(2);
-				flowNum += 2 * fraction;
-				moneyNum += 2 * 5 * fraction;
+				//根据点击时元素的位置进行计算
+				var bottomPos = parseFloat(this.style.bottom)-30;
+				var btmfraction = (bottomPos / 475).toFixed(2);
+				flowNum += 2 * btmfraction;
+				moneyNum += 2 * 5 * btmfraction;
 				$(".flow").html( flowNum.toFixed(2) );
 				$(".money").html( moneyNum.toFixed(2) );
 				//重置
