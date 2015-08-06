@@ -1,4 +1,4 @@
-var flowNum = 0, moneyNum = 0;
+var flowNum = 0, moneyNum = 0, fraction;
 //刷新更换app
 var arr=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 function randomApps() {
@@ -36,37 +36,36 @@ function moveOn (e, oncomplete, distance, time) {
 			//添加触摸重置事件
 			e.onmousedown = function() {
 				//根据点击时元素的位置进行计算
-				var bottomPos = parseFloat(this.style.bottom)-30;
-				var btmfraction = (bottomPos / 475).toFixed(2);
-				flowNum += 2 * btmfraction;
-				moneyNum += 2 * 5 * btmfraction;
+				var runDistance = parseFloat(this.style.bottom);
+				var savefraction = ((distance-runDistance) / distance).toFixed(2); //离起点越近阻止流量越多
+				
+				if( !$(this).hasClass("clicked") ) {  //防止重复计算
+					flowNum += 2 * savefraction; //单个app总流量为2M
+					moneyNum += 2 * 5 * savefraction; //每M流量暂计5元
+					console.log(savefraction);
+				}
 				$(".flow").html( flowNum.toFixed(2) );
 				$(".money").html( moneyNum.toFixed(2) );
-				//重置
-				fraction = 0;
+				//停止移动
 				clearTimeout(animateExec);
-				e.style.bottom = "30px";
+				$(this).addClass('clicked');
 			}
 		} else {
-			e.style.bottom = "30px";
+			e.style.bottom = distance + "px";
 			if (oncomplete) { oncomplete(e);}
 		}
 	}
 }
 
-var exec, fraction;
+var exec, state;
 function randomPick() {
 	var randomNum = Math.floor(Math.random() * 4) + 1; //1-4
 	var liId = "app" + randomNum;
-	var state = $("#"+liId).data("animated");
+	state = $("#"+liId).data("animated");
 	//改变属性避免重复执行
 	if(state == false) {
 		moveOn(liId, null, 450, 1500);
 		$("#"+liId).data("animated", true);
-		
-		setTimeout(function() {
-			$("#"+liId).data("animated", false);
-		}, 1500)
 	} 
 	
 	exec = setTimeout(randomPick,150);
@@ -82,7 +81,7 @@ $("#start-game").on("tap", function() {
 	setTimeout(function(){
 		clearTimeout(exec);
 		$(".result").removeClass("hide");
-	},5000);
+	},4000);
 })
 
 //按钮作用
