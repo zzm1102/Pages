@@ -1,34 +1,3 @@
-
-//var distanceFraction, flowNum = 0, moneyNum = 0;
-//
-//function randomPick() {
-//	var randomNum = Math.floor(Math.random() * 4);//0-3
-//	$("ul li").eq(randomNum).addClass("run");
-//	setTimeout(randomPick,150);
-//}
-//randomPick();
-//
-//$("ul li").on("tap", function() {
-//	
-//	var styleObj = window.getComputedStyle(this ,null);
-//	var transformVal = styleObj.getPropertyValue("transform");
-//	//正则获取matrix中transformY的值
-//	var numReg = /[0-9]+/g;//可能有负数所以就加个负号
-//	var valAry = transformVal.match(numReg);//返回一个包含有数字值的数组
-//	var transformXVal = valAry[valAry.length - 3],transformYVal = valAry[valAry.length - 2];
-//	
-//	distanceFraction = (transformYVal / 450).toFixed(1);
-//	console.log(distanceFraction);
-//
-//	flowNum += 2 * distanceFraction;
-//	moneyNum += 2 * 5 * distanceFraction;
-//	$("#flow").html(flowNum);
-//	$("#money").html(moneyNum);
-////alert('getComputedStyle' in window)
-//	
-//	$(this).removeClass("run");
-//})
-
 var flowNum = 0, moneyNum = 0;
 //刷新更换app
 var arr=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
@@ -65,7 +34,7 @@ function moveOn (e, oncomplete, distance, time) {
 			e.style.bottom = x + "px";
 			var animateExec = setTimeout(animate, Math.min(25, time-elapsed));
 			//添加触摸重置事件
-			e.onclick = function() {
+			e.onmousedown = function() {
 				//根据点击时元素的位置进行计算
 				var bottomPos = parseFloat(this.style.bottom)-30;
 				var btmfraction = (bottomPos / 475).toFixed(2);
@@ -92,18 +61,18 @@ function randomPick() {
 	var state = $("#"+liId).data("animated");
 	//改变属性避免重复执行
 	if(state == false) {
-		moveOn(liId, null, 450, 2000);
+		moveOn(liId, null, 450, 1500);
 		$("#"+liId).data("animated", true);
 		
 		setTimeout(function() {
 			$("#"+liId).data("animated", false);
-		}, 2000)
+		}, 1500)
 	} 
 	
 	exec = setTimeout(randomPick,150);
 }
 
-$("#start-game").on("click", function() {
+$("#start-game").on("tap", function() {
 	//开始游戏
 	$(".welcome-page,.mask").addClass("hide");
 	randomPick();
@@ -113,7 +82,18 @@ $("#start-game").on("click", function() {
 	setTimeout(function(){
 		clearTimeout(exec);
 		$(".result").removeClass("hide");
-	},10000);
+	},5000);
 })
 
+//按钮作用
+$("#share").on("tap", function(){
+	$(".share-page").removeClass("hide");
+})
+$(".share-page").on("tap", function(){
+	$(this).addClass("hide");
+})
+
+$("#replay").on("tap", function(){
+	window.location.reload();
+})
 
