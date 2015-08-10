@@ -1,0 +1,186 @@
+html, body, .wrap, .page {margin: 0; color: #fff; padding: 0;width: 100%; height: 100%; overflow: hidden; font-family: arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑"; font-weight: normal;}
+.wrap {background-color: #5F9EA0; }
+.hide {display: none;}
+.page {position: absolute;}
+@font-face {
+	font-family: 'clockTime';
+	src: url('LockClock.ttf') format('truetype');/*non-IE*/
+}
+.fl {float: left;}
+.fr {float: right;}
+
+/*desktop*/
+#background {background: url(../img/background.jpg) no-repeat top left; background-size: 100% 100%;}
+#desktop {margin: 20px auto; padding: 5px; text-align: center;}
+#desktop li {width: 70px; margin: 7px; text-align: center; list-style: none; display: inline-block;}
+#desktop li img {width: 70px;}
+#desktop #wechat-app img {height: 73px;}
+#background .pagenation {text-align: center; margin: 0; padding: 0;}
+#background .pagenation li {list-style: none; display: inline-block; width: 10px; height: 10px;  background-color: #ddd; border-radius: 50%; margin: 120px 5px;}
+#background .pagenation li:last-child {width: 18px; height: 18px; vertical-align: -5px;}
+.function {position: absolute; bottom: 10px;}
+.function img {width: 100%;}
+
+/*page1*/
+#call-page, #accept-page {background-color: #000;  text-align: center;}
+#call-page h1, #call-page h3,#accept-page h1, #accept-page h3 {font-weight: normal;}
+#call-page h1, #accept-page h1 {margin-top: 90px; letter-spacing: 3px;}
+#call-page h3, #accept-page h3 {color: #C0C0C0;}
+#call-page .icons i {width: 50px; margin-top: 185px; display: inline-block; font-style: normal; font-size: 12px; text-align: center; letter-spacing: 2px; color: #C0C0C0;}
+#call-page .icons i:first-child {margin-right: 140px;}
+#call-page .icons i img {width: 30px; display: block; margin: 0 auto 10px;}
+#accept-btn {margin-top: 30px;}
+#accept-btn img {width: 90px;}
+#accept-btn img:hover {opacity: .8;}
+
+/*page2*/
+#accept-page {z-index: 2;}
+#accept-page h3 {margin-bottom: 50px;}
+#accept-page .img-container {padding: 0; width: 100%;}
+#accept-page .img-container img {width: 100%;}
+#accept-page ul {padding: 0;}
+#accept-page ul li {list-style: none; display: inline-block; margin-right: 15px;}
+#accept-page ul li:last-child {margin-right: 0;}
+#accept-page #lighter {opacity: .5;}
+#accept-page ul li p { margin-top: 5px; margin-bottom: 0;color: #999;}
+#accept-page .btns img {width: 90px; margin-top: 10px; }
+
+/*page3*/
+#msg-page {background-color: #666; text-align: center;}
+#time {margin-top: 60px; margin-bottom: 0; font-size: 90px; font-weight: lighter;}
+#msg-page > p {margin: 0;}
+#msg-page .msg-block {margin-top: 40px; margin-left: 20px; border-top: 1px solid #999; border-bottom: 1px solid #999; padding: 20px 0; -ms-text-align-last: auto;
+text-align: left;}
+#msg-page .msg-block img {width: 25px;}
+#msg-page .msg-info {display: inline-block; vertical-align: top; margin-left: 10px;}
+#msg-page .msg-info i {font-style: normal; font-size: 13px; color: #999;}
+#msg-page .msg-info p { margin: 5px 0;}
+#msg-page h2 {position: absolute; bottom: 50px; width: 100%; color: #383838; font-weight: lighter; letter-spacing: 3px;}
+
+/*page4*/
+#password-page {background-color: #666; text-align: center;}
+#password-page p {margin-top: 70px; letter-spacing: 2px; margin-bottom: 0;}
+#password-page input {background-color: transparent; border: none; color: #fff; font-size: 60px; text-align: center; padding: 0; width: 200px; letter-spacing: 12px;}
+#num-block {margin: 0; padding: 0;}
+#num-block li {list-style: none; width: 80px; height: 80px; line-height: 80px; display: inline-block; border: 2px solid #ccc; border-radius: 50%; font-size: 40px; font-weight: lighter;margin: 5px;position: relative;}
+#num-block li span {display: block; font-size: 12px; position: absolute; width: 80px; bottom: -24px;}
+#password-page p:last-child {width: 80%; margin: 20px auto;}
+
+/*page5 eye-unlock*/
+#eye-unlock {background-color: #f3f2f8;}
+#eye-unlock .camera {height: 190px; overflow: hidden; position: relative;}
+#eye-unlock .camera img {width: 100%;}
+#eye-unlock .camera .frame {width: 100%; position: absolute; top: 0; left: 0;}
+#eye-unlock .point {position: absolute; top: 40px; right: 0;}
+#eye-unlock .other-choice {padding: 15px 5px; position: absolute; bottom: 0; left: 0; text-align: center; width: 100%; color: #333; border-top: 1px solid #c0c0c0;}
+
+/*page6,7*/
+#wechat, #chatting {background-color: #f3f2f8;}
+#wechat .top img, #chatting .top img {width: 100%;}
+#wechat .contact-info {color: #666; font-family: arial,"黑体"; margin: 7px;}
+#wechat .contact-info span {vertical-align: top;}
+#wechat .contact-info span:last-child {float: right; margin-right: 8px; color: #999;}
+
+#chatting .contact {color: #666; font-family: arial,"黑体"; margin: 8px;overflow-x: hidden; overflow-y: scroll; height: 83%;}
+#chatting .contact::-webkit-scrollbar {background: transparent;}
+#chatting .mystery {margin-bottom: 20px;}
+#chatting .mystery .dialogue {background-color: #fff; display: inline-block; max-width: 50%; margin: 0 13px; padding: 10px; vertical-align: top; border-radius: 5px; box-shadow: 1px 1px 1px #cacaca; position: relative;}
+#chatting .mystery .dialogue:before {
+	content: "";
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border-width: 12px;
+	border-style: solid;
+	border-color: transparent #fff transparent transparent; 
+	top: 10px;
+	left: -22px;
+}
+#chatting .me {margin-bottom: 20px; text-align: right;}
+#chatting .me .dialogue {background-color: #a0e75a; display: inline-block; max-width: 50%; margin: 0 13px; padding: 10px; vertical-align: top; border-radius: 5px; box-shadow: 1px 1px 1px #cacaca; position: relative; text-align: left;}
+#chatting .me .dialogue:before {
+	content: "";
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border-width: 12px;
+	border-style: solid;
+	border-color: transparent transparent transparent #a0e75a; 
+	top: 10px;
+	right: -22px;
+}
+#chatting .chat-bottom {position: absolute; bottom: 0; background-color: #f4f4f6; width: 100%; white-space: nowrap; padding: 10px 0; text-align: center; margin-left: -7px;}
+#chatting .chat-bottom img {width: 35px; vertical-align: middle; margin-right: 3px;}
+#chatting .chat-bottom input { border: none; height: 33px; width: 55%; vertical-align: middle; border-radius: 5px; margin-right: 10px;}
+#chatting #send-btn {width: 40px; margin: 0; display: inline-block; padding: 7px 3px; border: 1px solid #bbbdc1; border-radius: 7px; vertical-align: middle;}
+
+/*page8 朋友圈*/
+#friends {background-color: #fff; color: #444;}
+#friends .top img {width: 100%;}
+#friends .content {padding: 10px;}
+#friends .mix-info {display: inline-block; margin-left: 10px; vertical-align: top;}
+#friends .mix-info h4 {margin: 0;}
+#friends .mix-info p {margin: 15px 0 100px;}
+#friends .hide-msg {padding: 200px 10px 0 75px; font-family: "microsoft yahei"; }
+#friends .hide-msg a {text-decoration: none; font-size: 15px; color: #6E7FA5; font-weight: bold;}
+#friends #slide-btn {color: #6E7FA5; font-weight: bold; padding-left: 75px; margin-top: 20px;}
+#friends .content > img {width: 100%;}
+
+/*抽奖页面*/
+#lottery-page {background-color: #000;}
+#lottery{width:280px;height:280px; margin:50px auto;}
+#lottery table td{width:70px;height:70px; background-color: #5F9EA0; border-radius: 50%; text-align:center;vertical-align:middle;font-size:24px;color:#333;font-index:-999}
+#lottery table td img {width: 100%;}
+#lottery table td.select {background-color: #000;}
+#lottery table td a{width:140px;height:140px;text-align: center;display:block;text-decoration:none; background-color: #000; color: #fff;font-family: "microsoft yahei";}
+#lottery table td i {background-color: #6E7FA5; font-style: normal; padding: 0 10px;}
+#lottery table td.active{background-color:#FFFF00;}
+#lottery-page .share-popup {width: 260px; padding: 10px; border-radius: 10px; background-color: #fff; color: #000; text-align: center; position: absolute; left: 50%; margin-left: -140px; top: 180px; z-index: 20;}
+#lottery-page .share-popup h2 {margin: 10px 0px;}
+#lottery-page .share-popup a {padding: 10px 15px; text-decoration: none; color: coral; font-weight: bold;}
+
+
+
+
+/*@media screen and (min-width: 400px) and (max-width: 600px){
+.story {top: -40px;}
+}
+@media screen and (min-width: 330px) and (max-width: 400px) {
+.story {top: -85px;}
+}*/
+
+.mask {width: 100%; height: 100%; background-color: rgba(0,0,0,.6); z-index: 15; position: fixed; bottom: 0;}
+#popup {width: 200px; padding: 10px; border-radius: 10px; background-color: #fff; color: #000; text-align: center; position: absolute; left: 50%; margin-left: -110px; margin-top: 200px; z-index: 20;}
+#popup h2 {margin: 10px auto; border-bottom: 1px solid #C0C0C0; padding-bottom: 15px; margin-bottom: 0;}
+#popup span {color: darkcyan; width: 70px; display: inline-block;padding: 10px 11px 3px; cursor: pointer;}
+#popup .first {border-right: 1px solid #c0c0c0; padding-right: 15px;}
+
+
+.shake {animation: shake .4s ease-in-out;}
+.scale {animation: scale 1.5s ease-in-out infinite;}
+.aimPoint {animation: aimPoint 3s ease; animation-fill-mode: forwards}
+
+/*shake*/
+@keyframes shake {
+	0%,100% {transform: translateX(0);}
+	20% {transform: translateX(-15px);}
+	50% {transform: translateX(15px);}
+	80% {transform: translateX(-5px);}
+}
+
+/*scale*/
+@keyframes scale {
+	0%,100% {transform: scale(1);}
+	50% {transform: scale(1.1); opacity: .7;}
+}
+
+/*aimPoint*/
+@keyframes aimPoint {
+	0% {transform: translate(0,0);}
+	8% {transform: translateX(10px); opacity: .7;}
+	10% {transform: translateX(10px); opacity: 1;}
+	28% {transform: translate(10px,0px); opacity: .7;}
+	30% {transform: translate(10px,-5px); opacity: 1;}
+	100% {transform: translate(20px,0);}
+}
+

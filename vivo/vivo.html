@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vivo X5Pro 极夜黑 </title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="description" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/vivo.css" media="screen" />
+    <script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+    	<!--背景-->
+    	<div id="background" class="page">
+    		<ul id="desktop">
+	    		<li><img src="img/images/iphone_03.png"/> <span>地图</span> </li>
+	    		<li><img src="img/images/iphone_05.png"/> <span>相机</span> </li>
+	    		<li><img src="img/images/iphone_07.png"/> <span>时钟</span> </li>
+	    		<li><img src="img/images/iphone_09.png"/> <span>股市</span> </li>
+	    		<li><img src="img/images/iphone_16.png"/> <span>照片</span> </li>
+	    		<li id="wechat-app"><img src="img/wechat2.png"/> <span>微信</span> </li>
+	    		<li><img src="img/images/iphone_15.png"/> <span>音乐</span> </li>
+	    		<li><img src="img/images/iphone_23.png"/> <span>天气</span> </li>
+	    		<li><img src="img/images/iphone_25.png"/> <span>日历</span> </li>
+	    		<li><img src="img/images/iphone_26.png"/> <span>信息</span> </li>
+	    		<li><img src="img/images/iphone_32.png"/> <span>记事本</span> </li>
+	    		<li><img src="img/images/iphone_31.png"/> <span>设置</span> </li>
+	    	</ul>
+	    	<ul class="pagenation">
+	    		<li></li>
+	    		<li></li>
+	    		<li></li>
+	    	</ul>
+	    	<div class="function"><img src="img/function.png"/></div>
+    	</div>
+    	
+    	<!--page 1-->
+    	<div id="call-page" class="page">
+    		<h1>神秘人來電</h1>
+    		<h3>定位失敗</h3>
+    		<div class="icons">
+    			<i><img src="img/clock.png"/><b>提醒我</b></i><i><img src="img/message.png"/><b>信息</b></i>
+    		</div>
+    		<div id="accept-btn"><img class="scale" src="img/accept.png"/></div>
+    		<audio id="ringtone" src="img/iphone_ringtone.mp3" autoplay="autoplay"></audio>
+    	</div>
+    	
+    	<!--page 2 接聽頁面-->
+    	<div id="accept-page" class="page hide">
+    		<h1>神秘人來電</h1>
+    		<h3>定位失敗</h3>
+    		<!--<ul class="row">
+    			<li class="btns"><img src="img/accept.png"/><p>靜音</p></li>
+    			<li class="btns"><img src="img/accept.png"/><p>撥號鍵盤</p></li>
+    			<li class="btns"><img src="img/accept.png"/><p>免提</p></li>
+    		</ul>
+    		<ul class="row">
+    			<li class="btns"><img src="img/accept.png"/><p>添加通話</p></li>
+    			<li class="btns" id="lighter"><img src="img/accept.png"/><p>FaceTime</p></li>
+    			<li class="btns"><img src="img/accept.png"/><p>通訊錄</p></li>
+    		</ul>-->
+    		<div class="img-container">
+    			<img src="img/calling.png"/>
+    		</div>
+    		<div id="decline-btn" class="btns"><img src="img/decline.png"/><p>掛斷</p></div>
+    		<audio id="ringtone2" src="img/iphone_ringtone.mp3"></audio>
+    	</div>
+    	
+    	<!--page 3 信息頁面-->
+    	<div id="msg-page" class="page hide">
+    		<h1 id="time">17:30</h1>
+    		<p>7月10日&nbsp;&nbsp;星期五</p>
+    		<div class="msg-block">
+    			<span><img src="img/wechat.png"/></span>
+    			<div class="msg-info">
+    				<span>神秘人</span> <i>現在</i>
+    				<p>微信見。</p>
+    				<i>滑動來回復</i>
+    			</div>
+    		</div>
+    		<h2 id="swipe-btn">滑動來解鎖</h2>
+    	</div>
+    	
+    	<!--page 4 密碼驗證-->
+    	<div id="password-page" class="page hide">
+    		<p>輸入密碼</p>
+    		<input type="password" name="password" id="pass-value" value="" />
+    		<ul id="num-block">
+    			<div class="row">
+    				<li value="1">1<span>&nbsp;&nbsp;</span></li>
+	    			<li value="2">2<span>ABC</span></li>
+	    			<li value="3">3<span>DEF</span></li>
+    			</div>
+    			<div class="row">
+    				<li value="4">4<span>GHI</span></li>
+	    			<li value="5">5<span>JKL</span></li>
+	    			<li value="6">6<span>MNO</span></li>
+    			</div>
+    			<div class="row">
+    				<li value="7">7<span>PQRS</span></li>
+	    			<li value="8">8<span>TUV</span></li>
+	    			<li value="9">9<span>WXYZ</span></li>
+    			</div>
+    			<li value="0">0</li>
+    		</ul>
+    		<p><span class="fl">緊急服務</span> <span class="fr">取消</span></p>
+    	</div>
+    	
+    	<!--page 5 眼球解鎖-->
+    	<div id="eye-unlock" class="page hide">
+    		<div class="camera">
+    			<img src="img/eyes.jpg"/>
+    			<img class="frame" src="img/mask.png"/>
+    			<div class="point aimPoint"><img src="img/point.png"/></div>
+    		</div>
+    		<div class="other-choice">使用软件锁</div>
+    	</div>
+    	
+    	<!--page 6 微信登陸-->
+    	<div id="wechat" class="page hide">
+    		<div class="top"><img src="img/wechat_top.jpg"/></div>
+    		<div class="contact-info">
+    			<span><img src="img/head.jpg"/></span>
+    			<span>神秘人</span>
+    			<span>18:03</span>
+    		</div>
+    	</div>
+    	
+    	<!--page 7 微信聊天界面-->
+    	<div id="chatting" class="page hide">
+    		<div class="top"><img src="img/wechat_top2.jpg"/></div>
+    		<div class="contact">
+    			<div class="mystery chat-wrap">
+    				<img src="img/head.jpg" alt="" />
+    				<p class="dialogue">呵呵，早点用眼球加密不就不会被我黑了。答对这三个问题，就让你看我朋友圈的秘密。</p>
+    			</div>
+    			<div class="mystery chat-wrap">
+    				<img src="img/head.jpg" alt="" />
+    				<p class="dialogue">答对这三个问题。</p>
+    			</div>
+    			<div class="chat-bottom">
+    				<img src="img/btn1.jpg"/>
+    				<input type="text" name="" id="answer" value="" />
+    				<img src="img/btn2.jpg"/>
+    				<div id="send-btn">send</div>
+    			</div>
+    		</div>
+    	</div>
+    	
+    	<!--遮罩層-->
+    	<div class="mask hide"></div>
+    	<div id="popup" class="hide">
+    		<h2>这都能错，看来你的秘密是守不住了</h2>
+    		<span class="first">垂死挣扎重答此题</span>
+    		<span>分享至朋友圈求助</span>
+    	</div>
+    	
+    	<!--page 8 朋友圈分享-->
+    	<div id="friends" class="page hide">
+    		<div class="top"><img src="img/wechat_top3.jpg"/></div>
+    		<div class="content">
+    			<span><img src="img/head.jpg"/></span>
+    			<div class="mix-info">
+    				<h4>神秘人</h4>
+    				<p>刘建伟的秘密是</p>
+    			</div>
+    			<div class="hide-msg hide">
+    				<p>你现在就能拿到 X5Pro 极夜黑，让你的秘密不见天日。</p>
+    				<a href="javascript:;">查看详情>></a>
+    			</div>
+    			<div id="slide-btn">全文</div>
+    			<img src="img/content.jpg" alt="" />
+    		</div>
+    	</div>
+    	
+    	<!--抽奖-->
+    	<div id="lottery-page" class="page hide">
+    		<div id="lottery">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="lottery-unit lottery-unit-0"><img src="img/image/1.png"></td>
+						<td class="lottery-unit lottery-unit-1"><img src="img/image/2.png"></td>
+						<td class="lottery-unit lottery-unit-2"><img src="img/image/4.png"></td>
+			            <td class="lottery-unit lottery-unit-3"><img src="img/image/3.png"></td>
+					</tr>
+					<tr>
+						<td class="lottery-unit lottery-unit-11"><img src="img/image/7.png"></td>
+						<td class="select" colspan="2" rowspan="2"><a href="#"><br />玩了半天你让我看这个 <i>抽&nbsp;你</i></a></td>
+						<td class="lottery-unit lottery-unit-4"><img src="img/image/5.png"></td>
+					</tr>
+					<tr>
+						<td class="lottery-unit lottery-unit-10"><img src="img/image/1.png"></td>
+						<td class="lottery-unit lottery-unit-5"><img src="img/image/6.png"></td>
+					</tr>
+			        <tr>
+						<td class="lottery-unit lottery-unit-9"><img src="img/image/3.png"></td>
+						<td class="lottery-unit lottery-unit-8"><img src="img/image/6.png"></td>
+						<td class="lottery-unit lottery-unit-7"><img src="img/image/8.png"></td>
+			            <td class="lottery-unit lottery-unit-6"><img src="img/image/7.png"></td>
+					</tr>
+				</table>
+			</div>
+			<div class="share-popup hide">
+				<h2>好遗憾差点就中奖了...</h2>
+				<a href="#">去京东看看</a><a href="#">分享到朋友圈</a>
+			</div>
+    	</div>
+    	
+    	
+    </div> <!--wrap end-->
+    
+	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/touch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/lottery.js"></script>
+</body>
+</html>
