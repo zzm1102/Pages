@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>金龙鱼头条生成器</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="description" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/news.css" media="screen" />
+    <script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+    	<!--头条生成器-->
+    	<div id="news-creater">
+    		<div id="logo"><img src="img/logo.png"/></div>
+    		<h1>头条生成器</h1>
+    		<form action="#">
+    			<div class="name-box">
+    				<label for="name">输入名字：</label>
+    				<input type="text" name="name" id="name" value="" />
+    			</div>
+    			
+    			<div class="select-dish">
+    				<label>选择菜式：</label>
+	    			<select name="dishes" id="dishes">
+	    				<option value="麻婆豆腐">麻婆豆腐</option>
+	    				<option value="辣子鸡">辣子鸡</option>
+	    				<option value="宫保鸡丁">宫保鸡丁</option>
+	    				<option value="aaa">aaa</option>
+	    				<option value="bbb">bbb</option>
+	    			</select>
+    			</div>
+    			
+    		</form>
+    		<input type="button" name="submit" id="submit" value="生成" />
+    	</div>
+    	
+    </div> <!--wrap end-->
+    
+	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/touch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
