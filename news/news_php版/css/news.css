@@ -1,0 +1,83 @@
+html, body, .wrap {margin: 0; color: #000; overflow: hidden; padding: 0;width: 100%; height: 100%; font-family: arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑"; font-weight: normal;}
+.wrap {background-color: #fff; }
+.hide {display: none;}
+
+.wrap {width: 100%; height: 100%; position: relative;}
+.wrap .index-img {position: absolute; width: 100%; height: 100%; background-color: #5F9EA0;}
+.wrap .index-img img {width: 100%;height: 100%;}
+.wrap .index-img h1 {position: absolute; font-size: 55px; color: rgb(220,43,35); left: 0; top: 0; bottom: 0; top: 0; margin: auto; width: 90%; height: 150px; padding: 0 20px;}
+.wrap.create-page { overflow: hidden; background: url(../img/creater.jpg) no-repeat top left; background-size: 100% 100%;}
+#news-creater {padding: 41% 15px 0;} 
+#news-creater form { width: 100%; margin: 20px auto 0;}
+#news-creater .name-box {background-color: #fff; padding: 0 10px; height: 41px; width: 80%; margin: 0 auto; border-radius: 10px; box-shadow: 3px 3px 5px #C8BFB0;}
+#news-creater .name-box label {font-size: 17px; }
+#name {display: inline-block; font-size: 18px; padding: 10px 7px; width: 50%; height: 21px; }
+#news-creater .select-dish {margin: 20px auto 0;  width: 86%; position: relative;}
+#news-creater .select-dish label { width: 27%; background-color: #fff; padding: 10px 30px 10px 10px; border-radius: 10px; box-shadow: 3px 3px 5px #C8BFB0; display: inline-block; position: relative;}
+#news-creater .select-dish label:after {content: ""; border: 8px solid; border-color: transparent transparent transparent #583510; display: inline-block; width: 0; height: 0; position: absolute; top: 10px; right: 5px;}
+#dishes-name {font-size: 18px; display: inline-block; vertical-align: top; border-radius: 10px;  box-shadow: 3px 3px 5px #C8BFB0; overflow: hidden; margin-left: 15px; width: 45%; text-align: center;}
+#dishes-name li {margin-bottom: 5px; background-color: #fff; padding: 7px; box-shadow: 3px 3px 5px #C8BFB0;}
+#dishes-name li:last-child {margin-bottom: 0;}
+#dishes-name li.chosen {background-color: #ff1e1e; color: #fff;}
+.sub-btn {position: relative; margin: 20px auto; text-align: center; width: 150px;}
+#submit {width: 150px; display: block; font-size: 18px; padding: 20px 7px; background-color: transparent; position: absolute; top: 0;left: 0; z-index: 10;}
+/*隐藏上传照片input*/
+#news-creater #upload {position: absolute; top: 50px; left: 0;}
+#upload input {display: none;}
+
+/*news*/
+.wrap.news-page {background: url(../img/news_page.jpg) no-repeat top left; background-size: 100% 100%;padding-top: 1px;}
+.wrap .news {width: 76%; border-top: 1px; margin: 25% auto; padding: 0 4%; height: 59%; overflow: auto;}
+.wrap .news h1 {font-size: 18px; font-weight: bold; color: #ff1e1e; width: 100%; text-align: center; line-height: 1.3;}
+.wrap .news p {text-indent: 28px; font-size: 14px; line-height: 1.5;}
+.wrap .btns {text-align: center;}
+.wrap .btns a {display: inline-block; width: 35%; height: 40px; position: absolute; bottom: 15px; }
+#share {background: url(../img/share.png) no-repeat top left; background-size: 100% 100%; left: 10%;}
+#apply {background: url(../img/apply.png) no-repeat top left; background-size: 100% 100%; right: 10%;}
+#news {background: url(../img/mynews.png) no-repeat top left; background-size: 100% 100%; left: 10%;}
+
+/*transition-page*/
+.transition-page {position: relative; background: url(../img/index.jpg) no-repeat top left; background-size: 100% 100%;}
+#temp-photo {position: absolute; top: 100px; left: 50%; width: 150px; height: 150px; overflow: hidden;}
+#temp-photo img {width: 100%;}
+
+
+
+/*@media screen and (min-width: 400px) and (max-width: 600px){
+.story {top: -40px;}
+}
+@media screen and (min-width: 330px) and (max-width: 400px) {
+.story {top: -85px;}
+}*/
+
+.mask {width: 100%; height: 100%; background-color: rgba(0,0,0,.6); z-index: 15; position: fixed; bottom: 0; left: 0;}
+.mask img {display: block; position: absolute; right: -20px; top: 0;}
+
+.shake {animation: shake .4s ease-in-out;}
+.scale {animation: scale 1.5s ease-in-out infinite;}
+.aimPoint {animation: aimPoint 3s ease; animation-fill-mode: forwards}
+
+/*shake*/
+@keyframes shake {
+	0%,100% {transform: translateX(0);}
+	20% {transform: translateX(-15px);}
+	50% {transform: translateX(15px);}
+	80% {transform: translateX(-5px);}
+}
+
+/*scale*/
+@keyframes scale {
+	0%,100% {transform: scale(1);}
+	50% {transform: scale(1.1); opacity: .7;}
+}
+
+/*aimPoint*/
+@keyframes aimPoint {
+	0% {transform: translate(0,0);}
+	8% {transform: translateX(10px); opacity: .7;}
+	10% {transform: translateX(10px); opacity: 1;}
+	28% {transform: translate(10px,0px); opacity: .7;}
+	30% {transform: translate(10px,-5px); opacity: 1;}
+	100% {transform: translate(20px,0);}
+}
+
