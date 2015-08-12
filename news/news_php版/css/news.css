@@ -27,19 +27,21 @@ html, body, .wrap {margin: 0; color: #000; overflow: hidden; padding: 0;width: 1
 
 /*news*/
 .wrap.news-page {background: url(../img/news_page.jpg) no-repeat top left; background-size: 100% 100%;padding-top: 1px;}
-.wrap .news {width: 76%; border-top: 1px; margin: 25% auto; padding: 0 4%; height: 59%; overflow: auto;}
+.wrap .news {width: 80%; border-top: 1px; margin: 20% auto; padding: 0 5% 2%; height: 78%; overflow: auto;}
 .wrap .news h1 {font-size: 18px; font-weight: bold; color: #ff1e1e; width: 100%; text-align: center; line-height: 1.3;}
-.wrap .news p {text-indent: 28px; font-size: 14px; line-height: 1.5;}
+.wrap .news p {text-indent: 28px; font-size: 14px; line-height: 1.5; text-align: justify;}
 .wrap .btns {text-align: center;}
-.wrap .btns a {display: inline-block; width: 35%; height: 40px; position: absolute; bottom: 15px; }
+.wrap .btns a {display: inline-block; width: 35%; height: 40px; position: absolute; bottom: 2%; }
 #share {background: url(../img/share.png) no-repeat top left; background-size: 100% 100%; left: 10%;}
 #apply {background: url(../img/apply.png) no-repeat top left; background-size: 100% 100%; right: 10%;}
 #news {background: url(../img/mynews.png) no-repeat top left; background-size: 100% 100%; left: 10%;}
+.news .upload-img {width: 130px; height: 154px; margin: 10px auto; position: relative; overflow: hidden; }
+.news .upload-img img {width: 100%; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0;}
 
 /*transition-page*/
-.transition-page {position: relative; background: url(../img/index.jpg) no-repeat top left; background-size: 100% 100%;}
-#temp-photo {position: absolute; top: 100px; left: 50%; width: 150px; height: 150px; overflow: hidden;}
-#temp-photo img {width: 100%;}
+.transition-page {position: relative; background: url(../img/transition2.jpg) no-repeat top left; background-size: 100% 100%;}
+#temp-photo {position: absolute; top: 19%; left: 5%; width: 39%; height: 27.5%; overflow: hidden; }
+#temp-photo img {width: 100%; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0;}
 
 
 

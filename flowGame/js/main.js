@@ -1,4 +1,4 @@
-var flowNum = 0, moneyNum = 0, fraction;
+var flowNum = 0, moneyNum = 0, fraction, winH = $(window).height();
 //刷新更换app
 var arr=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 function randomApps() {
@@ -18,7 +18,7 @@ randomApps();
 function moveOn (e, oncomplete, distance, time) {
 	if (typeof e === "string") {e = document.getElementById(e);}
 	if (!time) { time = 1500;}
-	if (!distance) {distance = 450;}
+	if (!distance) {distance = 65;}
 
 	//使用Math.tan作为一个简单的缓动函数来创建非线性动画
 	//一开始比较慢，后面加速
@@ -30,19 +30,17 @@ function moveOn (e, oncomplete, distance, time) {
 		fraction = elapsed / time;
 
 		if (fraction < 1) {
-			var x = distance * Math.tan(fraction*1.2) / 2.58 + 30;  //计算元素的位置
-			e.style.bottom = x + "px";
+			var x = (distance*winH/100) * Math.tan(fraction*1.2) / 2.58 + 2;  //计算元素的位置
+			e.style.bottom = x/winH*100 + "%";
 			var animateExec = setTimeout(animate, Math.min(25, time-elapsed));
 			//添加触摸重置事件
-			e.onmousedown = function() {
+			e.onmousedown = function() {   //需要改成touchstart
 				//根据点击时元素的位置进行计算
-				var runDistance = parseFloat(this.style.bottom);
+				var runDistance = parseFloat(this.style.bottom).toFixed(2);
 				var savefraction = ((distance-runDistance) / distance).toFixed(2); //离起点越近阻止流量越多
-				
 				if( !$(this).hasClass("clicked") ) {  //防止重复计算
-					flowNum += 2 * savefraction; //单个app总流量为2M
-					moneyNum += 2 * 5 * savefraction; //每M流量暂计5元
-					console.log(savefraction);
+					flowNum += 5 * savefraction; //单个app总流量为5M
+					moneyNum += 5 * 2 * savefraction; //每M流量暂计2元
 				}
 				$(".flow").html( flowNum.toFixed(2) );
 				$(".money").html( moneyNum.toFixed(2) );
@@ -51,7 +49,8 @@ function moveOn (e, oncomplete, distance, time) {
 				$(this).addClass('clicked');
 			}
 		} else {
-			e.style.bottom = distance + "px";
+			e.style.bottom = distance + "%";
+			$(this).addClass('clicked');
 			if (oncomplete) { oncomplete(e);}
 		}
 	}
@@ -64,7 +63,7 @@ function randomPick() {
 	state = $("#"+liId).data("animated");
 	//改变属性避免重复执行
 	if(state == false) {
-		moveOn(liId, null, 450, 1500);
+		moveOn(liId, null, 65, 1500);
 		$("#"+liId).data("animated", true);
 	} 
 	

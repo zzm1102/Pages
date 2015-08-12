@@ -49,7 +49,9 @@ $insertTime=$newsDetail[3];
     <div class="wrap news-page">
     	<div class="news">
     		<h1><span class="user-name"><?php echo $userName;?></span>荣获首届“金龙鱼杯”川菜绝技烹饪大赛冠军</h1>
-    		<br/>
+    		<div class="upload-img">
+    			<img src="img/default.jpg" alt="default" />
+    		</div>
     		<p>由金龙鱼举办的首届“金龙鱼杯”川菜绝技烹饪大赛圆满落下帷幕。历经数月的比拼，擅长做川菜的小伙子<span class="user-name"><?php echo $userName;?></span>在总决赛中，凭着拿手菜<span class="chosen-dish"><?php echo $dishes;?></span>，从众多高手中脱颖而出，最终夺得“厨神”的名号并领走超级大奖。得奖后，<span class="user-name"><?php echo $userName;?></span>兴奋地告诉记者，“金龙鱼杯”川菜绝技烹饪大赛更加激发了我对厨艺的热情。
 决赛当天，总决赛现场气氛热烈，专业评委阵容强大，再加上多名现场观众评委，在历经7个月过关斩将、最终跻身总决赛的多名选手的现场多轮大比拼中，评选出最后的终极“厨神”。现场吸引了数百名观众积极参与，而主办方贴心准备的各种互动游戏更吸引了大批家庭加入。</p>
     		<p>决赛当天，总决赛现场气氛热烈，专业评委阵容强大，再加上多名现场观众评委，在历经7个月过关斩将、最终跻身总决赛的多名选手的现场多轮大比拼中，评选出最后的终极“厨神”。现场吸引了数百名观众积极参与，而主办方贴心准备的各种互动游戏更吸引了大批家庭加入。</p>
